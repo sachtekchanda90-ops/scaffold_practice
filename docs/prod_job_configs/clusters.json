@@ -1,0 +1,134 @@
+{
+  "exported_at": "2026-11-12T18:00:00Z",
+  "all_purpose_clusters": [
+    {
+      "cluster_name": "shared-etl-1",
+      "cluster_id": "0612-101500-shetl01",
+      "owner": "sam.okafor@shopnest.example",
+      "num_workers": 8,
+      "node_type": "i3.2xlarge",
+      "autotermination_minutes": 0,
+      "policy_id": null,
+      "custom_tags": {},
+      "libraries": [
+        "pandas==1.5.3",
+        "requests==2.31.0",
+        "shopnest-utils (wheel uploaded by hand, version unknown)"
+      ]
+    },
+    {
+      "cluster_name": "shared-etl-2",
+      "cluster_id": "0825-131000-shetl02",
+      "owner": "sam.okafor@shopnest.example",
+      "num_workers": 8,
+      "node_type": "i3.2xlarge",
+      "autotermination_minutes": 0,
+      "policy_id": null,
+      "custom_tags": {},
+      "libraries": [
+        "pandas==2.2.3 (upgraded 2026-09-22, was 1.5.3)",
+        "pyarrow==17.0.0",
+        "requests==2.32.3",
+        "shopnest-utils (wheel, no version)"
+      ]
+    },
+    {
+      "cluster_name": "analytics-big",
+      "cluster_id": "0701-090000-anbig01",
+      "owner": "nina.cho@shopnest.example",
+      "num_workers": 10,
+      "node_type": "i3.2xlarge",
+      "autotermination_minutes": 120,
+      "policy_id": null,
+      "custom_tags": {
+        "team": "analytics"
+      },
+      "libraries": [
+        "plotly",
+        "seaborn"
+      ]
+    },
+    {
+      "cluster_name": "ml-team",
+      "cluster_id": "0710-100000-mlteam1",
+      "owner": "omar.haddad@shopnest.example",
+      "num_workers": 4,
+      "node_type": "i3.2xlarge",
+      "autotermination_minutes": 60,
+      "policy_id": null,
+      "custom_tags": {
+        "team": "ml"
+      },
+      "libraries": [
+        "xgboost==2.0.3",
+        "mlflow"
+      ]
+    },
+    {
+      "cluster_name": "dev-rahul",
+      "cluster_id": "0715-090000-devrahu",
+      "owner": "rahul.verma@shopnest.example",
+      "num_workers": 2,
+      "node_type": "i3.2xlarge",
+      "autotermination_minutes": 0,
+      "policy_id": null,
+      "custom_tags": {},
+      "libraries": []
+    },
+    {
+      "cluster_name": "dev-priya",
+      "cluster_id": "0716-090000-devpriy",
+      "owner": "priya.nair@shopnest.example",
+      "num_workers": 2,
+      "node_type": "i3.2xlarge",
+      "autotermination_minutes": 0,
+      "policy_id": null,
+      "custom_tags": {},
+      "libraries": []
+    },
+    {
+      "cluster_name": "dev-jake",
+      "cluster_id": "0717-090000-devjake",
+      "owner": "jake.lin@shopnest.example",
+      "num_workers": 2,
+      "node_type": "i3.2xlarge",
+      "autotermination_minutes": 0,
+      "policy_id": null,
+      "custom_tags": {},
+      "libraries": []
+    },
+    {
+      "cluster_name": "dev-maria",
+      "cluster_id": "0718-090000-devmari",
+      "owner": "maria.gomez@shopnest.example",
+      "num_workers": 2,
+      "node_type": "i3.2xlarge",
+      "autotermination_minutes": 60,
+      "policy_id": null,
+      "custom_tags": {},
+      "libraries": []
+    },
+    {
+      "cluster_name": "dev-tom",
+      "cluster_id": "0719-090000-devtom.",
+      "owner": "tom.reed@shopnest.example",
+      "num_workers": 2,
+      "node_type": "i3.2xlarge",
+      "autotermination_minutes": 60,
+      "policy_id": null,
+      "custom_tags": {},
+      "libraries": []
+    },
+    {
+      "cluster_name": "dev-lena",
+      "cluster_id": "0720-090000-devlena",
+      "owner": "lena.fischer@shopnest.example",
+      "num_workers": 2,
+      "node_type": "i3.2xlarge",
+      "autotermination_minutes": 60,
+      "policy_id": null,
+      "custom_tags": {},
+      "libraries": []
+    }
+  ]
+}

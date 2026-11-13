@@ -1,0 +1,13 @@
+{
+  "exported_at": "2026-11-12T18:00:00Z",
+  "sql_warehouses": [
+    {
+      "name": "bi-finance",
+      "size": "Small",
+      "type": "SERVERLESS",
+      "auto_stop_minutes": 10,
+      "users": "Finance Tableau only"
+    }
+  ],
+  "note": "Analysts run SQL in notebooks on the all-purpose cluster analytics-big; no warehouse for analysts."
+}

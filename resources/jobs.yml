@@ -1,0 +1,97 @@
+# A slice of ShopNest's production jobs, re-pointed at serverless so they deploy to Free Edition.
+# In production these run on shared all-purpose clusters (see the commented existing_cluster_id lines and
+# docs/prod_job_configs/). Only 4 of the 34 production jobs are in this bundle; the rest are listed in
+# docs/prod_job_configs/jobs_inventory.json. All schedules are PAUSED here.
+
+resources:
+  jobs:
+    shopnest_setup:
+      name: shopnest_00_setup
+      description: One-off setup for the mock workspace. Run this first.
+      tasks:
+        - task_key: load_system_history
+          notebook_task:
+            notebook_path: ../src/00_setup_load_system_history.py
+            base_parameters:
+              catalog: ${var.catalog}
+              sim_schema: ${var.sim_schema}
+              bundle_root: ${workspace.file_path}
+        - task_key: load_source_data
+          notebook_task:
+            notebook_path: ../src/01_load_source_data.py
+            base_parameters:
+              catalog: ${var.catalog}
+              schema: ${var.schema}
+              bundle_root: ${workspace.file_path}
+        - task_key: orders_daily
+          depends_on: [{task_key: load_source_data}]
+          notebook_task:
+            notebook_path: ../src/02_orders_daily.py
+            base_parameters: {catalog: "${var.catalog}", schema: "${var.schema}"}
+        - task_key: orders_daily_v2_history
+          depends_on: [{task_key: orders_daily}]
+          notebook_task:
+            notebook_path: ../src/03_orders_daily_v2.py
+            base_parameters: {catalog: "${var.catalog}", schema: "${var.schema}", since: "2026-10-03"}
+        - task_key: sessions
+          depends_on: [{task_key: load_source_data}]
+          notebook_task:
+            notebook_path: ../src/04_clickstream_sessions.py
+            base_parameters: {catalog: "${var.catalog}", schema: "${var.schema}", run_summary: "false"}
+        - task_key: revenue_gold
+          depends_on: [{task_key: orders_daily_v2_history}]
+          notebook_task:
+            notebook_path: ../src/05_revenue_daily_gold.py
+            base_parameters: {catalog: "${var.catalog}", schema: "${var.schema}"}
+
+    orders_daily:
+      name: orders_daily
+      # prod: existing_cluster_id: 0612-101500-shetl01   (shared-etl-1, all-purpose, auto-termination 0)
+      schedule:
+        quartz_cron_expression: "0 0 3 * * ?"
+        timezone_id: America/Chicago
+        pause_status: PAUSED
+      tasks:
+        - task_key: orders
+          notebook_task:
+            notebook_path: ../src/02_orders_daily.py
+            base_parameters: {catalog: "${var.catalog}", schema: "${var.schema}"}
+
+    orders_daily_v2:
+      name: orders_daily_v2
+      # prod: existing_cluster_id: 0612-101500-shetl01   created 2026-10-03 by rahul.verma ("faster version for web")
+      schedule:
+        quartz_cron_expression: "0 30 3 * * ?"
+        timezone_id: America/Chicago
+        pause_status: PAUSED
+      tasks:
+        - task_key: orders_v2
+          notebook_task:
+            notebook_path: ../src/03_orders_daily_v2.py
+            base_parameters: {catalog: "${var.catalog}", schema: "${var.schema}", since: ""}
+
+    clickstream_sessions_daily:
+      name: clickstream_sessions_daily
+      # prod: existing_cluster_id: 0825-131000-shetl02   (shared-etl-2; libraries installed by hand on the cluster)
+      schedule:
+        quartz_cron_expression: "0 0 2 * * ?"
+        timezone_id: America/Chicago
+        pause_status: PAUSED
+      tasks:
+        - task_key: sessions
+          notebook_task:
+            notebook_path: ../src/04_clickstream_sessions.py
+            base_parameters: {catalog: "${var.catalog}", schema: "${var.schema}", run_summary: "true"}
+
+    revenue_daily_gold:
+      name: revenue_daily_gold
+      # prod: existing_cluster_id: 0825-131000-shetl02
+      schedule:
+        quartz_cron_expression: "0 0 5 * * ?"
+        timezone_id: America/Chicago
+        pause_status: PAUSED
+      tasks:
+        - task_key: revenue
+          notebook_task:
+            notebook_path: ../src/05_revenue_daily_gold.py
+            base_parameters: {catalog: "${var.catalog}", schema: "${var.schema}"}

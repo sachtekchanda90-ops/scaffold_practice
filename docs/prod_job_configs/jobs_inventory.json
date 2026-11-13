@@ -1,0 +1,584 @@
+{
+  "exported_at": "2026-11-12T18:00:00Z",
+  "workspace": "shopnest-prod",
+  "job_count": 34,
+  "jobs": [
+    {
+      "job_id": "201",
+      "name": "clickstream_sessions_daily",
+      "owner": "jake.lin@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/jake.lin@shopnest.example/clickstream_sessions_daily",
+      "compute": {
+        "existing_cluster_id": "0825-131000-shetl02",
+        "cluster": "shared-etl-2"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "202",
+      "name": "Clickstream_Ingest_Hourly",
+      "owner": "jake.lin@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 * * * ?",
+      "notebook_path": "/Users/jake.lin@shopnest.example/Clickstream_Ingest_Hourly",
+      "compute": {
+        "existing_cluster_id": "0612-101500-shetl01",
+        "cluster": "shared-etl-1"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "203",
+      "name": "clickstream-bot-filter",
+      "owner": "jake.lin@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/jake.lin@shopnest.example/clickstream-bot-filter",
+      "compute": {
+        "existing_cluster_id": "0825-131000-shetl02",
+        "cluster": "shared-etl-2"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "204",
+      "name": "sessions_attribution_v3",
+      "owner": "jake.lin@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/jake.lin@shopnest.example/sessions_attribution_v3",
+      "compute": {
+        "existing_cluster_id": "0825-131000-shetl02",
+        "cluster": "shared-etl-2"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "205",
+      "name": "click_events_compact",
+      "owner": "jake.lin@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/jake.lin@shopnest.example/click_events_compact",
+      "compute": {
+        "existing_cluster_id": "0825-131000-shetl02",
+        "cluster": "shared-etl-2"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "206",
+      "name": "pageviews_rollup",
+      "owner": "jake.lin@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/jake.lin@shopnest.example/pageviews_rollup",
+      "compute": {
+        "existing_cluster_id": "0612-101500-shetl01",
+        "cluster": "shared-etl-1"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "207",
+      "name": "cs_ingest_backfill_OLD",
+      "owner": "jake.lin@shopnest.example",
+      "tags": {},
+      "schedule": "disabled",
+      "notebook_path": "/Users/jake.lin@shopnest.example/cs_ingest_backfill_OLD",
+      "compute": {
+        "new_cluster": {
+          "spark_version": "15.4.x-scala2.12",
+          "node_type_id": "i3.xlarge",
+          "num_workers": 2
+        }
+      },
+      "libraries": [],
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "208",
+      "name": "funnel_steps_hourly",
+      "owner": "jake.lin@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 * * * ?",
+      "notebook_path": "/Users/jake.lin@shopnest.example/funnel_steps_hourly",
+      "compute": {
+        "existing_cluster_id": "0612-101500-shetl01",
+        "cluster": "shared-etl-1"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "209",
+      "name": "orders_daily",
+      "owner": "rahul.verma@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/rahul.verma@shopnest.example/orders_daily",
+      "compute": {
+        "existing_cluster_id": "0612-101500-shetl01",
+        "cluster": "shared-etl-1"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "210",
+      "name": "Orders_Returns_Daily",
+      "owner": "rahul.verma@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/rahul.verma@shopnest.example/Orders_Returns_Daily",
+      "compute": {
+        "existing_cluster_id": "0825-131000-shetl02",
+        "cluster": "shared-etl-2"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "211",
+      "name": "orders-shipments-sync",
+      "owner": "rahul.verma@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 0/4 * * ?",
+      "notebook_path": "/Users/rahul.verma@shopnest.example/orders-shipments-sync",
+      "compute": {
+        "existing_cluster_id": "0612-101500-shetl01",
+        "cluster": "shared-etl-1"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "212",
+      "name": "order_items_refresh",
+      "owner": "rahul.verma@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/rahul.verma@shopnest.example/order_items_refresh",
+      "compute": {
+        "existing_cluster_id": "0612-101500-shetl01",
+        "cluster": "shared-etl-1"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "213",
+      "name": "inventory_snapshot",
+      "owner": "rahul.verma@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/rahul.verma@shopnest.example/inventory_snapshot",
+      "compute": {
+        "existing_cluster_id": "0612-101500-shetl01",
+        "cluster": "shared-etl-1"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "214",
+      "name": "refunds_nightly",
+      "owner": "rahul.verma@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/rahul.verma@shopnest.example/refunds_nightly",
+      "compute": {
+        "existing_cluster_id": "0825-131000-shetl02",
+        "cluster": "shared-etl-2"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "215",
+      "name": "orders_daily_v2",
+      "owner": "rahul.verma@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/rahul.verma@shopnest.example/orders_daily_v2",
+      "compute": {
+        "existing_cluster_id": "0612-101500-shetl01",
+        "cluster": "shared-etl-1"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "216",
+      "name": "campaign_spend_import",
+      "owner": "maria.gomez@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/maria.gomez@shopnest.example/campaign_spend_import",
+      "compute": {
+        "existing_cluster_id": "0825-131000-shetl02",
+        "cluster": "shared-etl-2"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "217",
+      "name": "Email_Engagement_Daily",
+      "owner": "maria.gomez@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/maria.gomez@shopnest.example/Email_Engagement_Daily",
+      "compute": {
+        "existing_cluster_id": "0612-101500-shetl01",
+        "cluster": "shared-etl-1"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "218",
+      "name": "promo_codes_sync",
+      "owner": "maria.gomez@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 0/4 * * ?",
+      "notebook_path": "/Users/maria.gomez@shopnest.example/promo_codes_sync",
+      "compute": {
+        "existing_cluster_id": "0612-101500-shetl01",
+        "cluster": "shared-etl-1"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "219",
+      "name": "mkt_attribution_test_rahul",
+      "owner": "rahul.verma@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/rahul.verma@shopnest.example/mkt_attribution_test_rahul",
+      "compute": {
+        "new_cluster": {
+          "spark_version": "15.4.x-scala2.12",
+          "node_type_id": "i3.xlarge",
+          "num_workers": 2
+        }
+      },
+      "libraries": [],
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "220",
+      "name": "affiliate_payouts",
+      "owner": "maria.gomez@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/maria.gomez@shopnest.example/affiliate_payouts",
+      "compute": {
+        "new_cluster": {
+          "spark_version": "15.4.x-scala2.12",
+          "node_type_id": "i3.xlarge",
+          "num_workers": 2
+        }
+      },
+      "libraries": [],
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "221",
+      "name": "audience_segments",
+      "owner": "maria.gomez@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/maria.gomez@shopnest.example/audience_segments",
+      "compute": {
+        "existing_cluster_id": "0825-131000-shetl02",
+        "cluster": "shared-etl-2"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "222",
+      "name": "ab_test_results",
+      "owner": "maria.gomez@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/maria.gomez@shopnest.example/ab_test_results",
+      "compute": {
+        "existing_cluster_id": "0825-131000-shetl02",
+        "cluster": "shared-etl-2"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "223",
+      "name": "revenue_daily_gold",
+      "owner": "tom.reed@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/tom.reed@shopnest.example/revenue_daily_gold",
+      "compute": {
+        "existing_cluster_id": "0825-131000-shetl02",
+        "cluster": "shared-etl-2"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "224",
+      "name": "payouts_reconcile",
+      "owner": "tom.reed@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/tom.reed@shopnest.example/payouts_reconcile",
+      "compute": {
+        "existing_cluster_id": "0825-131000-shetl02",
+        "cluster": "shared-etl-2"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "225",
+      "name": "tax_extract_monthly",
+      "owner": "tom.reed@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 2 2 * ?",
+      "notebook_path": "/Users/tom.reed@shopnest.example/tax_extract_monthly",
+      "compute": {
+        "new_cluster": {
+          "spark_version": "15.4.x-scala2.12",
+          "node_type_id": "i3.xlarge",
+          "num_workers": 2
+        }
+      },
+      "libraries": [],
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "226",
+      "name": "Finance_GL_Export",
+      "owner": "tom.reed@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/tom.reed@shopnest.example/Finance_GL_Export",
+      "compute": {
+        "new_cluster": {
+          "spark_version": "15.4.x-scala2.12",
+          "node_type_id": "i3.xlarge",
+          "num_workers": 2
+        }
+      },
+      "libraries": [],
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "227",
+      "name": "fx_rates_load",
+      "owner": "tom.reed@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 0/6 * * ?",
+      "notebook_path": "/Users/tom.reed@shopnest.example/fx_rates_load",
+      "compute": {
+        "existing_cluster_id": "0612-101500-shetl01",
+        "cluster": "shared-etl-1"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "228",
+      "name": "cogs_daily",
+      "owner": "tom.reed@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/tom.reed@shopnest.example/cogs_daily",
+      "compute": {
+        "existing_cluster_id": "0825-131000-shetl02",
+        "cluster": "shared-etl-2"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "229",
+      "name": "features_customer_daily",
+      "owner": "omar.haddad@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/omar.haddad@shopnest.example/features_customer_daily",
+      "compute": {
+        "existing_cluster_id": "0825-131000-shetl02",
+        "cluster": "shared-etl-2"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "230",
+      "name": "reco_training_weekly",
+      "owner": "omar.haddad@shopnest.example",
+      "tags": {
+        "team": "ml"
+      },
+      "schedule": "0 0 2 ? * SUN",
+      "notebook_path": "/Users/omar.haddad@shopnest.example/reco_training_weekly",
+      "compute": {
+        "new_cluster": {
+          "spark_version": "15.4.x-scala2.12",
+          "node_type_id": "i3.xlarge",
+          "num_workers": 2
+        }
+      },
+      "libraries": [],
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "231",
+      "name": "churn_scores_daily",
+      "owner": "omar.haddad@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/omar.haddad@shopnest.example/churn_scores_daily",
+      "compute": {
+        "existing_cluster_id": "0825-131000-shetl02",
+        "cluster": "shared-etl-2"
+      },
+      "libraries": "inherited from the cluster",
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "232",
+      "name": "ml_features_hourly",
+      "owner": "omar.haddad@shopnest.example",
+      "tags": {},
+      "schedule": "0 0 * * * ?",
+      "notebook_path": "/Users/omar.haddad@shopnest.example/ml_features_hourly",
+      "compute": {
+        "new_cluster": {
+          "spark_version": "15.4.x-scala2.12",
+          "node_type_id": "i3.xlarge",
+          "num_workers": 2
+        }
+      },
+      "libraries": [],
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "233",
+      "name": "demand_forecast",
+      "owner": "omar.haddad@shopnest.example",
+      "tags": {
+        "team": "ml"
+      },
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/omar.haddad@shopnest.example/demand_forecast",
+      "compute": {
+        "new_cluster": {
+          "spark_version": "15.4.x-scala2.12",
+          "node_type_id": "i3.xlarge",
+          "num_workers": 2
+        }
+      },
+      "libraries": [],
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    },
+    {
+      "job_id": "234",
+      "name": "feature_store_sync",
+      "owner": "omar.haddad@shopnest.example",
+      "tags": {
+        "team": "ml"
+      },
+      "schedule": "0 0 3 * * ?",
+      "notebook_path": "/Users/omar.haddad@shopnest.example/feature_store_sync",
+      "compute": {
+        "new_cluster": {
+          "spark_version": "15.4.x-scala2.12",
+          "node_type_id": "i3.xlarge",
+          "num_workers": 2
+        }
+      },
+      "libraries": [],
+      "email_notifications": {},
+      "max_retries": 0,
+      "git_source": null
+    }
+  ]
+}

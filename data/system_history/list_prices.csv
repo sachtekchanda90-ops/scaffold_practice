@@ -1,0 +1,5 @@
+price_start_time,price_end_time,account_id,sku_name,cloud,currency_code,usage_unit,pricing
+2026-01-01 00:00:00,,c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,PREMIUM_JOBS_COMPUTE,AWS,USD,DBU,"{""default"": 0.15}"
+2026-01-01 00:00:00,,c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,PREMIUM_ALL_PURPOSE_COMPUTE,AWS,USD,DBU,"{""default"": 0.55}"
+2026-01-01 00:00:00,,c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,PREMIUM_SERVERLESS_SQL_COMPUTE_US_EAST,AWS,USD,DBU,"{""default"": 0.7}"
+2026-01-01 00:00:00,,c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,PREMIUM_JOBS_SERVERLESS_COMPUTE_US_EAST,AWS,USD,DBU,"{""default"": 0.35}"

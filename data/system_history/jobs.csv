@@ -1,0 +1,49 @@
+account_id,workspace_id,job_id,name,creator_id,run_as,tags,change_time,delete_time,description
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,201,clickstream_sessions_daily,jake.lin@shopnest.example,jake.lin@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,201,clickstream_sessions_daily,jake.lin@shopnest.example,jake.lin@shopnest.example,{},2026-08-25 13:13:00,,existing cluster shared-etl-2
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,202,Clickstream_Ingest_Hourly,jake.lin@shopnest.example,jake.lin@shopnest.example,{},2026-06-20 10:00:00,,existing cluster shared-etl-1
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,203,clickstream-bot-filter,jake.lin@shopnest.example,jake.lin@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,203,clickstream-bot-filter,jake.lin@shopnest.example,jake.lin@shopnest.example,{},2026-08-25 13:14:00,,existing cluster shared-etl-2
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,204,sessions_attribution_v3,jake.lin@shopnest.example,jake.lin@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,204,sessions_attribution_v3,jake.lin@shopnest.example,jake.lin@shopnest.example,{},2026-08-25 13:15:00,,existing cluster shared-etl-2
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,205,click_events_compact,jake.lin@shopnest.example,jake.lin@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,205,click_events_compact,jake.lin@shopnest.example,jake.lin@shopnest.example,{},2026-08-25 13:16:00,,existing cluster shared-etl-2
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,206,pageviews_rollup,jake.lin@shopnest.example,jake.lin@shopnest.example,{},2026-06-20 10:00:00,,existing cluster shared-etl-1
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,207,cs_ingest_backfill_OLD,jake.lin@shopnest.example,jake.lin@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,208,funnel_steps_hourly,jake.lin@shopnest.example,jake.lin@shopnest.example,{},2026-06-20 10:00:00,,existing cluster shared-etl-1
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,209,orders_daily,rahul.verma@shopnest.example,rahul.verma@shopnest.example,{},2026-06-20 10:00:00,,existing cluster shared-etl-1
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,210,Orders_Returns_Daily,rahul.verma@shopnest.example,rahul.verma@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,210,Orders_Returns_Daily,rahul.verma@shopnest.example,rahul.verma@shopnest.example,{},2026-08-25 13:17:00,,existing cluster shared-etl-2
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,211,orders-shipments-sync,rahul.verma@shopnest.example,rahul.verma@shopnest.example,{},2026-06-20 10:00:00,,existing cluster shared-etl-1
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,212,order_items_refresh,rahul.verma@shopnest.example,rahul.verma@shopnest.example,{},2026-06-20 10:00:00,,existing cluster shared-etl-1
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,213,inventory_snapshot,rahul.verma@shopnest.example,rahul.verma@shopnest.example,{},2026-06-20 10:00:00,,existing cluster shared-etl-1
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,214,refunds_nightly,rahul.verma@shopnest.example,rahul.verma@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,214,refunds_nightly,rahul.verma@shopnest.example,rahul.verma@shopnest.example,{},2026-08-25 13:18:00,,existing cluster shared-etl-2
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,215,orders_daily_v2,rahul.verma@shopnest.example,rahul.verma@shopnest.example,{},2026-10-03 11:05:00,,existing cluster shared-etl-1
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,216,campaign_spend_import,maria.gomez@shopnest.example,maria.gomez@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,216,campaign_spend_import,maria.gomez@shopnest.example,maria.gomez@shopnest.example,{},2026-08-25 13:19:00,,existing cluster shared-etl-2
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,217,Email_Engagement_Daily,maria.gomez@shopnest.example,maria.gomez@shopnest.example,{},2026-06-20 10:00:00,,existing cluster shared-etl-1
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,218,promo_codes_sync,maria.gomez@shopnest.example,maria.gomez@shopnest.example,{},2026-06-20 10:00:00,,existing cluster shared-etl-1
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,219,mkt_attribution_test_rahul,rahul.verma@shopnest.example,rahul.verma@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,220,affiliate_payouts,maria.gomez@shopnest.example,maria.gomez@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,221,audience_segments,maria.gomez@shopnest.example,maria.gomez@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,221,audience_segments,maria.gomez@shopnest.example,maria.gomez@shopnest.example,{},2026-08-25 13:20:00,,existing cluster shared-etl-2
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,222,ab_test_results,maria.gomez@shopnest.example,maria.gomez@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,222,ab_test_results,maria.gomez@shopnest.example,maria.gomez@shopnest.example,{},2026-08-25 13:21:00,,existing cluster shared-etl-2
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,223,revenue_daily_gold,tom.reed@shopnest.example,tom.reed@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,223,revenue_daily_gold,tom.reed@shopnest.example,tom.reed@shopnest.example,{},2026-08-25 13:22:00,,existing cluster shared-etl-2
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,224,payouts_reconcile,tom.reed@shopnest.example,tom.reed@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,224,payouts_reconcile,tom.reed@shopnest.example,tom.reed@shopnest.example,{},2026-08-25 13:23:00,,existing cluster shared-etl-2
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,225,tax_extract_monthly,tom.reed@shopnest.example,tom.reed@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,226,Finance_GL_Export,tom.reed@shopnest.example,tom.reed@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,227,fx_rates_load,tom.reed@shopnest.example,tom.reed@shopnest.example,{},2026-06-20 10:00:00,,existing cluster shared-etl-1
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,228,cogs_daily,tom.reed@shopnest.example,tom.reed@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,228,cogs_daily,tom.reed@shopnest.example,tom.reed@shopnest.example,{},2026-08-25 13:24:00,,existing cluster shared-etl-2
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,229,features_customer_daily,omar.haddad@shopnest.example,omar.haddad@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,229,features_customer_daily,omar.haddad@shopnest.example,omar.haddad@shopnest.example,{},2026-08-25 13:25:00,,existing cluster shared-etl-2
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,230,reco_training_weekly,omar.haddad@shopnest.example,omar.haddad@shopnest.example,"{""team"": ""ml""}",2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,231,churn_scores_daily,omar.haddad@shopnest.example,omar.haddad@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,231,churn_scores_daily,omar.haddad@shopnest.example,omar.haddad@shopnest.example,{},2026-08-25 13:26:00,,existing cluster shared-etl-2
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,232,ml_features_hourly,omar.haddad@shopnest.example,omar.haddad@shopnest.example,{},2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,233,demand_forecast,omar.haddad@shopnest.example,omar.haddad@shopnest.example,"{""team"": ""ml""}",2026-06-20 10:00:00,,job cluster
+c2e8a1f4-7b3d-4e9a-8c51-6d0f2b9e4a33,6060120000000001,234,feature_store_sync,omar.haddad@shopnest.example,omar.haddad@shopnest.example,"{""team"": ""ml""}",2026-06-20 10:00:00,,job cluster

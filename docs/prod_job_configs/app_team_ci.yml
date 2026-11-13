@@ -1,0 +1,26 @@
+# .github/workflows/storefront-ci.yml  (ShopNest app team, storefront repo)
+# Shared for reference: the data team has no CI. GitHub Actions and an OIDC trust to the cloud
+# account already exist; the data team could reuse this pattern.
+name: storefront-ci
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm ci && npm test
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: test
+    runs-on: ubuntu-latest
+    environment: production        # requires approval from @storefront-leads
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./scripts/deploy.sh

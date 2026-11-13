@@ -1,0 +1,21 @@
+bundle:
+  name: shopnest_workspace
+
+include:
+  - resources/*.yml
+
+variables:
+  catalog:
+    description: Unity Catalog catalog (Free Edition default is "workspace")
+    default: workspace
+  schema:
+    description: Project schema
+    default: shopnest
+  sim_schema:
+    description: Schema holding the simulated system-table history
+    default: sim_system
+
+targets:
+  dev:
+    mode: development     # prefixes resource names with [dev <user>] and pauses all schedules
+    default: true
